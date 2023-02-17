@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Card, FormField, Loader } from '../components';
+import { apiPath } from '../constants';
 
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
@@ -26,7 +27,7 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://dalle-arbb.onrender.com/api/v1/post', {
+      const response = await fetch(`${apiPath}/api/v1/post`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
