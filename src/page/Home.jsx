@@ -50,6 +50,7 @@ const Home = () => {
     fetchPosts();
   };
 
+  //TODO: figure out a way to make it an infinite scroll that fetches at the bottom of the page
   return (
     <section className="max-w-7xl mx-auto">
       {/* <div>
